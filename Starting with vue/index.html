@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lear vue.js</title>
+</head>
+<body>
+    <div id="elzero">
+
+<h1>{{ name.length>4? name:"name is to short" }}</h1>
+<h1>{{ age + "year" }}</h1>
+<h1>your first skils {{skils[0]}}</h1>
+<h2>{{isSubscribed? "Subscribed": "NotSubscribed"}}</h2>
+<h3>{{sayHelow()}}</h3>
+</div>
+  <script src="js/vue.js"></script>
+  <script>
+// new Vue ({
+//     el:"#elzero",
+//     data:{
+//         message:"hello from vue"
+//     }
+// })
+var vu =new Vue({
+el:"#elzero",
+data:{
+    name:"mutaz",
+    age:25,
+    skils:["HTML","CSS","JS"],
+    isSubscribed:false,
+
+
+},
+methods:{
+        sayHelow:function hello(){
+            return this.age;
+        }   }
+})
+  </script>
+</body>
+</html>
